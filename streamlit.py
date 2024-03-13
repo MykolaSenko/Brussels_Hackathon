@@ -38,6 +38,8 @@ if prompt := st.chat_input("Are you a victim of domestic violence? Tell me what 
     with st.chat_message("assistant"):
         if "message_history" not in st.session_state:
             message_history = []
+        else:
+            message_history = st.session_state.message_history
         answer, message_history = ask_chat(prompt, message_history)
         st.session_state.message_history = message_history
         st.markdown(answer)
