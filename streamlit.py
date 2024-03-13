@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-from script.script import ask_chat
+from script.script_chat import ask_chat
 
 st.set_page_config(layout="wide")
 
@@ -17,6 +17,9 @@ st.markdown(
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
+    
+if "message_history" not in st.session_state:
+    st.session_state.message_history = []
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
@@ -33,7 +36,9 @@ if prompt := st.chat_input("Are you a victim of domestic violence? Tell me what 
     
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
-        answer, message_history = ask_chat(prompt, [])
+        
+        answer, message_history = ask_chat(prompt, st.session_state.message_history)
+        st.session_state.message_history = message_history
         st.markdown(answer)
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": answer})
