@@ -17,6 +17,6 @@ def ask_chat(prompt, messages):
         ]
     messages.append(ChatMessage.from_user(prompt))
     response = chat_generator.run(messages=messages)
-    
+    messages.append(response["replies"][0])
     
     return response["replies"][0].content, messages
