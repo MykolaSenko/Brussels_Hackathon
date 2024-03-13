@@ -1,14 +1,13 @@
+import streamlit as st
 
 
+def ask_chat(prompt):
 
-def ask_chat(question):
-    response = openai.Completion.create(
-        engine="davinci",
-        prompt=question,
-        max_tokens=1024,
-        n=1,
-        stop=None,
-        temperature=0.7,
-    )
+    response = f"Tell me more about: {prompt}"
+    # Display assistant response in chat message container
+    with st.chat_message("assistant"):
+        st.markdown(response)
+    # Add assistant response to chat history
+    answer = st.session_state.messages.append({"role": "assistant", "content": response})    
 
-    return 'Tell me more'
+    return answer
