@@ -1,11 +1,12 @@
 import streamlit as st
-import random
 import time
 from script.script import ask_chat
 
 st.set_page_config(layout="wide")
 
 st.title("Domestic violence victims helper")
+
+st.warning('This application is made only with learning purposes. Do not use it in the case of real domestic violence.', icon="⚠️")
 
 st.markdown(
     f"""
