@@ -6,7 +6,7 @@ from haystack.components.converters import HTMLToDocument
 from haystack.components.builders import PromptBuilder
 from haystack.components.generators import OpenAIGenerator
 
-def ask_chat(prompt):
+def ask_chat(prompt, message_history):
     fetcher = LinkContentFetcher()
     converter = HTMLToDocument()
     prompt_template = """
@@ -40,4 +40,4 @@ def ask_chat(prompt):
     result = pipeline.run({"fetcher": {"urls": ["https://resourcehub.bakermckenzie.com/en/resources/fighting-domestic-violence/europe/belgium/topics/4-protection-for-domestic-violence-victims-and-relief-granted"]},
                 "prompt": {"query": prompt}})
     
-    return result["llm"]["replies"][0]
+    return result["llm"]["replies"][0], []

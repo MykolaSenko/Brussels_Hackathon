@@ -7,4 +7,11 @@ prompt = "Mijn vrouw slaat mij, wat kan ik doen ?"
 
 print(prompt)
 
-print(ask_chat(prompt))
+message_history = []
+response = ask_chat(prompt, message_history)
+
+print(response.reply_content)
+
+prompt2 = "Are you sure?"
+response = ask_chat(prompt2, response.message_history)
+
