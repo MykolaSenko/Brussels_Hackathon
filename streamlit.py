@@ -36,8 +36,9 @@ if prompt := st.chat_input("Are you a victim of domestic violence? Tell me what 
     
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
-        
-        answer, message_history = ask_chat(prompt, st.session_state.message_history)
+        if "message_history" not in st.session_state:
+            message_history = []
+        answer, message_history = ask_chat(prompt, message_history)
         st.session_state.message_history = message_history
         st.markdown(answer)
     # Add assistant response to chat history

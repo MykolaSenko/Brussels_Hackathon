@@ -1,17 +1,18 @@
 import os
-from script import ask_chat
+from script_chat import ask_chat
 
-prompt = "Mijn vrouw slaat mij, wat kan ik doen ?"
-# prompt = "Ma femme me bat, qu'est-ce que je peux faire ?"
+# prompt = "Mijn vrouw slaat mij, wat kan ik doen ?"
+prompt = "Ma femme me bat, qu'est-ce que je peux faire ?"
 # question = "My wife is beating me, what could I do?"
 
 print(prompt)
 
 message_history = []
-response = ask_chat(prompt, message_history)
+response, message_history = ask_chat(prompt, message_history)
 
-print(response.reply_content)
+print(response)
 
-prompt2 = "Are you sure?"
-response = ask_chat(prompt2, response.message_history)
+prompt2 = "Est-ce que tu peux expliquer plus en détail ta première proposition stp ?"
+response, message_history = ask_chat(prompt2, message_history)
 
+print(response)
