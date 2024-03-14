@@ -22,7 +22,8 @@ def ask_chat(prompt, messages):
             - Is the user injured?
             - Does the user have evidence?
 
-            If all the questions have been answered, redirect the user to the house of justice and explain how to contact them.
+            If all the questions have been answered, redirect the user to the house of justice and explain how to contact them with the following information:
+            Phone number: 0800 00 00 00
             """
         )]
     messages.append(ChatMessage.from_user(prompt))

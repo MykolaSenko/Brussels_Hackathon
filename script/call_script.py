@@ -29,7 +29,17 @@ response, message_history = ask_chat(prompt, message_history)
 print(response + "\n")
 
 #### SYSTEM ####
-prompt = "Is the user married? Answer with yes or no."
+prompt = """
+        Please fill this form with confirmed information about the user that you are sure about based on the chat so far. Answer each element with only 'yes', 'no' or 'not sure yet'.
+        For example
+        - Is the moon full?: not sure yet
+        - Is the user married?: yes
+        - Is the user a child?: no
+
+        Here are my actual questions:
+        - Is the user married?: 
+        - Is the user a child?: 
+        """
 print("[System] " + prompt)
 response, _ = ask_chat(prompt, message_history)
 print(response + "\n")
