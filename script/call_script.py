@@ -28,7 +28,20 @@ print(prompt)
 response, message_history = ask_chat(prompt, message_history)
 print(response + "\n")
 
+#### SYSTEM ####
+prompt = "Is the user married? Answer with yes or no."
+print("[System] " + prompt)
+response, _ = ask_chat(prompt, message_history)
+print(response + "\n")
+
 prompt = "> Yes, I even went to the hospital last week!"
 print(prompt)
 response, message_history = ask_chat(prompt, message_history)
 print(response + "\n")
+
+prompt = "> Well, I have the hospital bills"
+print(prompt)
+response, message_history = ask_chat(prompt, message_history)
+print(response + "\n")
+
+
