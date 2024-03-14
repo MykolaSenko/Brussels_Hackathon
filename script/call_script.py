@@ -24,8 +24,8 @@ response, _ = ask_chat(status_prompt, message_history)
 print("[System]")
 print(response + "\n")
 
-prompt = "> Yes"
-print(prompt)
+prompt = "Yes"
+print("> " + prompt)
 response, message_history = ask_chat(prompt, message_history)
 print(response + "\n")
 
@@ -34,8 +34,8 @@ response, _ = ask_chat(status_prompt, message_history)
 print("[System]")
 print(response + "\n")
 
-prompt = "> No"
-print(prompt)
+prompt = "No"
+print("> " + prompt)
 response, message_history = ask_chat(prompt, message_history)
 print(response + "\n")
 
@@ -44,8 +44,8 @@ response, _ = ask_chat(status_prompt, message_history)
 print("[System]")
 print(response + "\n")
 
-prompt = "> My wife beats me all the time"
-print(prompt)
+prompt = "My wife beats me all the time"
+print("> " + prompt)
 response, message_history = ask_chat(prompt, message_history)
 print(response + "\n")
 
@@ -54,8 +54,8 @@ response, _ = ask_chat(status_prompt, message_history)
 print("[System]")
 print(response + "\n")
 
-prompt = "> Since marriage, 2 years ago. She beats me every day in the morning before leaving to work."
-print(prompt)
+prompt = "Since marriage, 2 years ago. She beats me every day in the morning before leaving to work."
+print("> " + prompt)
 response, message_history = ask_chat(prompt, message_history)
 print(response + "\n")
 
@@ -74,8 +74,8 @@ response, _ = ask_chat(status_prompt, message_history)
 print("[System]")
 print(response + "\n")
 
-prompt = "> Well, I have the hospital bills"
-print(prompt)
+prompt = "Well, I have the hospital bills"
+print("> " + prompt)
 response, message_history = ask_chat(prompt, message_history)
 print(response + "\n")
 
