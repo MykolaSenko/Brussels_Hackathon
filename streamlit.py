@@ -1,16 +1,18 @@
 import streamlit as st
-import time
 from script.script_chat import ask_chat
 
 st.set_page_config(layout="wide")
 
-st.title("Domestic violence victims helper")
+st.title(":blue[Protect.me]")
+st.markdown(":blue[**This application is designed to help domestic violence victims to gain access to justice.**]")
 
 st.warning('This application is made only with learning purposes. Do not use it in the case of real domestic violence.', icon="⚠️")
 
 st.markdown(
-    f"""
-    This application is designed to help domestic violence victims to gey access to justice.
+    """
+    I'm a chatbot dedicated to assist victims of domestic violence in Belgium.
+    Whether you're experiencing abuse, seeking information, or looking for ways to stay safe, I am here to help.
+    I can offer you advice to get legal support and how to gather evidences.
     """
 )
 
