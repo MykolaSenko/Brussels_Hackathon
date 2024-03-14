@@ -1,5 +1,5 @@
 import streamlit as st
-from script.script_chat import ask_chat
+from script.script_chat import ask_chat, ask_status
 
 st.set_page_config(layout="wide")
 
@@ -49,6 +49,8 @@ if prompt := st.chat_input("Are you a victim of domestic violence? Tell me what 
 
         answer, message_history = ask_chat(prompt, message_history)
         st.session_state.message_history = message_history
-        st.markdown(answer)
+
+        status = ask_status(message_history)
+        st.markdown(answer + "  \n*" + status + "*")
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": answer})

@@ -41,8 +41,8 @@ def ask_status(chat_messages):
     
     status_prompt = """
         Below is a form with questions about the chat you just had. 
-        Please fill it with confirmed information. 
-        Answer each element with only 'yes', 'no' or 'not sure yet'.
+        Please fill it with information provided by the user and what you can infer from it. 
+        Answer each element with only 'yes', 'no' or 'not sure yet' followed by your reasonning.
 
         Here is an example of how to answer each element of that form.
         # First example chat #
@@ -61,8 +61,8 @@ def ask_status(chat_messages):
         I'm sorry to hear that.
 
         # Second example of filled form #
-        A. Is the user married?: yes
-        B. Is the user a child?: no
+        A. Is the user married?: yes, user mentioned their wife
+        B. Is the user a child?: no, a child would not be married
         C. Is the user injured?: not sure yet
 
         # This is the chat history you should use as input #
