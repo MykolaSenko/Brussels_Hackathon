@@ -50,19 +50,20 @@ This project is licensed under the [MIT License](LICENSE).
 
 The app was created by the *Justice League Team* during the **SmartNation AI Hackathon** (March 12-14, 2024) in Brussels, Belgium.
 
-## Team:
+## Team Members:
+(in alphabetical order)
 
-**Jean-Michel Humblet** [LinkedIn](https://www.linkedin.com/in/jean-michel-humblet-976a7075) [GitHub](https://github.com/jmhumblet)
+**Bart Nys**
 
 **Florent Mages** [LinkedIn](https://www.linkedin.com/in/florent-mages-ab088832/)
+
+**Hazem Halawi** [LinkedIn](https://www.linkedin.com/in/hazemhalawi/), [GitHub](https://github.com/Hz-Skywalker)
+
+**Jean-Michel Humblet** [LinkedIn](https://www.linkedin.com/in/jean-michel-humblet-976a7075) [GitHub](https://github.com/jmhumblet)
 
 **Mykola Senko** [LinkedIn](https://www.linkedin.com/in/mykola-senko-683510a4/) [GitHub](https://github.com/MykolaSenko)
 
 **Thomas Thiry** [LinkedIn](https://www.linkedin.com/in/thomas-thiry/), [GitHub](https://github.com/thomasthiry)
-
-**Hazem Halawi** [LinkedIn](https://www.linkedin.com/in/hazemhalawi/), [GitHub](https://github.com/Hz-Skywalker)
-
-**Bart Nys**
 
 ---
 
