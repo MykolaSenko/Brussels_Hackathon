@@ -31,3 +31,51 @@ def ask_chat(prompt, messages):
     messages.append(response["replies"][0])
     
     return response["replies"][0].content, messages
+
+    
+def ask_status(chat_messages):
+    chat_generator = OpenAIChatGenerator(model="gpt-3.5-turbo")
+
+    chat_messages_content = ' '.join(chat_message.content for chat_message in chat_messages)
+    # print("chat messages : " + chat_messages_content)
+    
+    status_prompt = """
+        Below is a form with questions about the chat you just had. 
+        Please fill it with confirmed information. 
+        Answer each element with only 'yes', 'no' or 'not sure yet'.
+
+        Here is an example of how to answer each element of that form.
+        # First example chat #
+        > Hello, how are you
+        I'm fine, thank you, what about you?
+
+        # First example of filled form #
+        A. Is the user married?: not sure yet
+        B. Is the user a child?: not sure yet
+        C. Is the user injured?: not sure yet
+
+        # Second example chat #
+        > Hello, how are you
+        I'm fine, thank you, what about you?
+        > Well, my wife is angry at me.
+        I'm sorry to hear that.
+
+        # Second example of filled form #
+        A. Is the user married?: yes
+        B. Is the user a child?: no
+        C. Is the user injured?: not sure yet
+
+        # This is the chat history you should use as input #
+    """ + chat_messages_content + """
+        # End of the chat history #
+
+        # This is the form you should fill based on the chat history listed above #
+        A. Is the user married?: 
+        B. Is the user a child?: 
+        C. Is the user injured?: 
+        # End of the form you should fill #
+        """
+
+    messages = [ChatMessage.from_system(status_prompt)]
+    response = chat_generator.run(messages=messages)
+    return response["replies"][0].content
